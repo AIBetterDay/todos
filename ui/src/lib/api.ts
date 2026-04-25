@@ -8,8 +8,7 @@
  *   - undo middleware (results that include `_undo` flow into the host stack);
  *   - same-connector skills only; cross-connector work is done by the in-app AI, not iframes.
  *
- * The functions below mirror the legacy `apps/web/src/modules/connectors/todo/api.ts`
- * shape so the page code can be a near-verbatim port.
+ * The functions below keep a small typed API facade for page components.
  */
 
 import type { Host } from '@better/connector-sdk-web';

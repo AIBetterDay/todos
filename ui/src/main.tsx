@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { connect, type Host } from '@better/connector-sdk-web';
-import { setCalendarLocale, notifyThemeChange } from '@better/connector-calendar';
+import { setCalendarLocale, notifyThemeChange } from './calendar/index.js';
 import { App } from './App.js';
 import { initI18n, setLocale } from './i18n.js';
 import './styles/globals.css';

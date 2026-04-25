@@ -1,7 +1,6 @@
 /**
- * Connector-local todo types. These mirror the legacy `@better/shared` shape
- * the original todo UI consumed, but live entirely inside the connector so the
- * UI iframe has zero coupling to host data layers.
+ * Connector-local todo types. They live entirely inside the connector so the UI
+ * iframe has zero coupling to host data layers.
  *
  * `parseTodoRepeatRule` is also re-implemented here (not imported from shared)
  * for the same reason.

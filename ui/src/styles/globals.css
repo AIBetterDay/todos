@@ -1,17 +1,6 @@
 @import "tailwindcss";
 
-/*
- * Tailwind v4 auto-content-discovery walks the project root but **skips
- * node_modules** — workspace packages are symlinked under
- * `node_modules/@better/*`, so their class names (e.g. the entire calendar UI
- * inside `@better/connector-calendar`) would silently fall out of the build
- * and the iframe would render unstyled boxes.
- *
- * Explicitly pull those source trees into the scan so utilities like
- * `absolute`, `sticky`, `bg-sky-400/22`, `border-r`, … are emitted.
- */
-@source "../../../../../../packages/connector-calendar/src/**/*.{ts,tsx}";
-@source "../../../../../../packages/connector-ui-primitives/src/**/*.{ts,tsx}";
+@source "../calendar/**/*.{ts,tsx}";
 
 /* Mirror host's "darkMode: 'class'" semantics inside the iframe. The host pushes
  * theme.changed events; main.tsx toggles `<html class="dark">` accordingly. */

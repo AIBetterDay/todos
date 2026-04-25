@@ -3,7 +3,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { format, addMinutes } from 'date-fns';
 import { CalendarDays, List } from 'lucide-react';
-import { cn } from '@better/connector-ui-primitives';
+import { cn } from '../lib/cn.js';
 import {
   Calendar,
   CalendarHeader,
@@ -16,7 +16,7 @@ import {
   type CalendarView,
   type EventClipboardAction,
   type SelectionSlot,
-} from '@better/connector-calendar';
+} from '../calendar/index.js';
 import { TodoListView } from '../components/TodoListView.js';
 import { useTodoReminders } from '../hooks/use-todo-reminders.js';
 import { buildCreateFromTodo, normalizeTodo } from '../lib/normalize.js';
@@ -33,12 +33,8 @@ const MIN_TO_Y = HOUR_HEIGHT / 60;
 type ViewMode = 'calendar' | 'list';
 
 /**
- * Faithful port of the legacy `apps/web/src/modules/connectors/todo/pages/todo-page.tsx`
- * — same state machine, same handlers, same calendar/list interaction surface.
- *
- * The only behavioral changes versus the legacy page:
- *   - data layer: `api` is the host-skill bridge (no HTTP) instead of fetch.
- *   - Goals coupling removed (no `goalId` in patches/creates).
+ * Same state machine, handlers, and calendar/list interaction surface as the
+ * original todos page, but with connector-local data and calendar helpers.
  */
 export function TodoPage({ api }: TodoPageProps) {
   const { t } = useTranslation();

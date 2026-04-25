@@ -15,6 +15,35 @@
   "ui": { "entry": "ui/dist/index.html" },
   "skills": { "entry": "skills/dist/main.js", "memoryLimitMb": 192 },
 
+  "capabilities": [
+    {
+      "id": "capture-and-schedule-todos",
+      "title": { "en": "Capture and schedule todos", "zh": "记录并安排待办" },
+      "description": {
+        "en": "Turn natural-language requests into actionable todos with priority, due dates, reminders, repeat rules, tags, and nested subtasks.",
+        "zh": "把自然语言请求变成可执行待办，支持优先级、截止时间、提醒、重复规则、标签和子任务。"
+      },
+      "examples": [
+        { "en": "Remind me to renew the passport next Friday morning.", "zh": "提醒我下周五上午更新护照。" },
+        { "en": "Create a high priority todo for the product review and tag it work.", "zh": "创建一个产品评审的高优先级待办，并标记为工作。" }
+      ],
+      "uses": ["create", "update", "bulk_update"]
+    },
+    {
+      "id": "review-and-organize-todos",
+      "title": { "en": "Review and organize todos", "zh": "复盘并整理待办" },
+      "description": {
+        "en": "Search, filter, reschedule, complete, cancel, or bulk-edit todos by status, priority, date range, overdue state, and tags.",
+        "zh": "按状态、优先级、日期区间、逾期状态和标签查找、改期、完成、取消或批量整理待办。"
+      },
+      "examples": [
+        { "en": "Show overdue todos and move the low priority ones to next week.", "zh": "列出逾期待办，把低优先级的移到下周。" },
+        { "en": "Mark everything tagged errands as completed.", "zh": "把 errands 标签下的事项全部标记完成。" }
+      ],
+      "uses": ["list", "get", "update", "bulk_update", "delete"]
+    }
+  ],
+
   "storage": {
     "tables": [
       {

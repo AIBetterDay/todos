@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Check, Settings2, GitBranch } from 'lucide-react';
-import { cn } from '@better/connector-ui-primitives';
-import { format, type CalendarEvent } from '@better/connector-calendar';
+import { cn } from '../lib/cn.js';
+import { format, type CalendarEvent } from '../calendar/index.js';
 
 interface TodoListViewProps {
   events: CalendarEvent[];
