@@ -210,6 +210,25 @@
     { "pattern": "^/(c/)?todo(/(?<id>[a-zA-Z0-9_-]+))?$", "kind": "todo" }
   ],
 
+  "chatRenderers": [
+    {
+      "kind": "application/x.todo-item+json",
+      "title": { "en": "Todo item", "zh": "待办详情" }
+    },
+    {
+      "kind": "application/x.todo-list+json",
+      "title": { "en": "Todo list", "zh": "待办列表" }
+    },
+    {
+      "kind": "application/x.todo-schedule+json",
+      "title": { "en": "Todo schedule", "zh": "待办日程" }
+    },
+    {
+      "kind": "application/x.todo-bulk-action+json",
+      "title": { "en": "Bulk todo update", "zh": "批量待办更新" }
+    }
+  ],
+
   "permissions": {
     "storage": "own",
     "ai": [],

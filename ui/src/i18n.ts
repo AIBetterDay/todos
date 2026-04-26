@@ -9,6 +9,34 @@ const zh = {
       listEmpty: '这一段时间没有待办',
       listEmptyHint: '切到日历视图右键空白就能新建。',
       listSectionTimed: '有具体时间',
+      cards: {
+        untitledTodo: '未命名待办',
+        todoItem: '待办详情',
+        todoList: '待办列表',
+        schedule: '待办日程',
+        bulkAction: '批量更新',
+        reminder: '提醒',
+        noTodos: '暂无待办可展示。',
+        noSchedule: '还没有安排到日程的待办。',
+        bulkDone: '批量操作已完成。',
+        anytime: '任意时间',
+        totalCount: '共 {{count}} 个',
+        pendingCount: '{{count}} 个待处理',
+        completedCount: '{{count}} 个已完成',
+        scheduledCount: '{{count}} 个已安排',
+        unscheduledCount: '{{count}} 个未安排',
+        updatedCount: '{{count}} 个已更新',
+        rescheduledCount: '{{count}} 个已改期',
+        cancelledCount: '{{count}} 个已取消',
+        statusPending: '待处理',
+        statusInProgress: '进行中',
+        statusCompleted: '已完成',
+        statusCancelled: '已取消',
+        priorityLow: '低',
+        priorityMedium: '中',
+        priorityHigh: '高',
+        priorityUrgent: '紧急',
+      },
     },
     calendar: {
       allDay: '全天',
@@ -47,6 +75,34 @@ const en = {
       listEmpty: 'Nothing on the schedule',
       listEmptyHint: 'Switch to calendar and right-click an empty slot to add one.',
       listSectionTimed: 'Scheduled',
+      cards: {
+        untitledTodo: 'Untitled todo',
+        todoItem: 'Todo item',
+        todoList: 'Todo list',
+        schedule: 'Todo schedule',
+        bulkAction: 'Bulk update',
+        reminder: 'Reminder',
+        noTodos: 'No todos to display.',
+        noSchedule: 'No scheduled todos yet.',
+        bulkDone: 'Bulk action completed.',
+        anytime: 'Anytime',
+        totalCount: '{{count}} total',
+        pendingCount: '{{count}} pending',
+        completedCount: '{{count}} completed',
+        scheduledCount: '{{count}} scheduled',
+        unscheduledCount: '{{count}} unscheduled',
+        updatedCount: '{{count}} updated',
+        rescheduledCount: '{{count}} rescheduled',
+        cancelledCount: '{{count}} cancelled',
+        statusPending: 'Pending',
+        statusInProgress: 'In progress',
+        statusCompleted: 'Completed',
+        statusCancelled: 'Cancelled',
+        priorityLow: 'Low',
+        priorityMedium: 'Medium',
+        priorityHigh: 'High',
+        priorityUrgent: 'Urgent',
+      },
     },
     calendar: {
       allDay: 'All day',
@@ -89,6 +145,8 @@ export async function initI18n(initialLocale: string): Promise<void> {
 export function setLocale(locale: string): void {
   void i18next.changeLanguage(normalizeLocale(locale));
 }
+
+export default i18next;
 
 function normalizeLocale(locale: string): 'zh' | 'en' {
   const lower = (locale || '').toLowerCase();

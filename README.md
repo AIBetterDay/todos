@@ -23,11 +23,36 @@ Todos is built for the moment when a thought becomes an action. Add a task in pl
 
 ## Interface Preview
 
-Product screenshots and short demos will live in `assets/store/`. They are intentionally not checked in yet; the store page will be updated again after real product images are added.
+![Todos overview](./assets/store/overview.png)
+
+Plan from chat into the calendar: Better can turn a natural-language schedule into real todos with times, reminders, and context.
+
+![Todo list view](./assets/store/listview.png)
+
+Switch to a focused list when you want to scan what is done, what is scheduled, and what still needs attention.
+
+![Create todo on the calendar](./assets/store/make_todo.png)
+
+Create or edit todos directly inside the calendar, including time range, repeat rule, color, and reminder settings.
+
+![Weekly calendar view](./assets/store/week_view.png)
+
+Use the week view to balance recurring routines, deep work, errands, and flexible tasks across your schedule.
+
+![Monthly calendar view](./assets/store/month_view.png)
+
+Zoom out to the month view to spot busy weeks and keep long-running plans visible.
 
 ## Chat Cards
 
-When this connector returns structured results in Better chat, render them as product cards from `ui/src/cards/` instead of exposing raw JSON or long plain text. Card assets and styles should stay with the UI code.
+Todos now includes React chat cards in `ui/src/cards/` for structured responses from Better:
+
+- Todo item cards show one task with priority, status, schedule, reminders, and tags.
+- Todo list cards group multiple tasks with completed and pending counts.
+- Schedule cards render day plans as a compact time-ordered agenda.
+- Bulk action cards summarize completed, rescheduled, cancelled, or updated tasks.
+
+These cards keep task results readable and actionable in chat instead of exposing raw JSON.
 
 ## Privacy
 
